@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JElectronics</title>
+    <style>
+        :root {
+            --texto-color: black;
+            --texto-tamano: 16px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: var(--texto-color);
+            font-size: var(--texto-tamano);
+        }
+        header {
+            background: white;
+            color: black;
+            padding: 20px;
+            text-align: left;
+            font-size: 24px;
+            border-bottom: 1px solid #ccc;
+        }
+        header img {
+            max-height: 50px;
+            vertical-align: middle;
+        }
+        nav {
+            background: white;
+            color: black;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #ccc;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 5px 10px;
+            font-size: 14px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .service {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .service img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .service.flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+        }
+        .service .text {
+            width: 50%;
+            padding: 20px;
+        }
+        .service .image {
+            width: 50%;
+        }
+        .service .image img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        /* Estilos para el carrusel */
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 1s ease;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo.jpg" alt="Logo">
+    </header>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#fabricacion">Fabricación de PCBs</a>
+        <a href="#diseno">Diseño de PCBs</a>
+        <a href="#venta">Venta de Componentes</a>
+        <a href="#desarrollo">Desarrollo Electrónico</a>
+        <a href="#impresion">Impresión 3D</a>
+        <a href="#ensamble">Ensamble de PCBs</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="container">
+        <div class="service" id="inicio">
+            <h2>Bienvenido</h2>
+            <div class="carousel-container">
+                <div class="carousel-images" id="carousel">
+                    <img src="img/inicio1.jpg" alt="Imagen 1">
+                    <img src="img/inicio2.jpg" alt="Imagen 2">
+                    <img src="img/inicio3.jpg" alt="Imagen 3">
+                </div>
+            </div>
+            <p>Explora nuestras soluciones especializadas en servicios electrónicos.</p>
+        </div>
+        <div class="service flex" id="fabricacion">
+            <div class="text">
+                <h2>Fabricación de PCBs</h2>
+                <p>Ofrecemos fabricación de circuitos impresos desde 5 piezas hasta cientos. Nuestra infraestructura está diseñada para trabajar con placas de 1 y 2 caras, así como con PCBs de 1, 2 y 4 capas.</p>
+                <button class="button"><a href="#contacto" style="color:white;text-decoration:none;">Contacto</a></button>
+                <button class="button"><a href="fabricacion.html" style="color:white;text-decoration:none;">Más</a></button>
+            </div>
+            <div class="image">
+                <img src="img/fabricacion.jpg" alt="Fabricación de PCBs">
+            </div>
+        </div>
+        <div class="service flex" id="diseno">
+            <div class="image">
+                <img src="img/diseno.jpg" alt="Diseño de PCBs">
+            </div>
+            <div class="text">
+                <h2>Diseño de PCBs</h2>
+                <p>Desde esquemáticos hasta diseños optimizados para manufactura.</p>
+                <button class="button"><a href="#contacto" style="color:white;text-decoration:none;">Contacto</a></button>
+            </div>
+        </div>
+        <div class="service flex" id="venta">
+            <div class="text">
+                <h2>Venta de Componentes</h2>
+                <p>Suministro de componentes electrónicos de alta calidad.</p>
+                <button class="button"><a href="#contacto" style="color:white;text-decoration:none;">Contacto</a></button>
+            </div>
+            <div class="image">
+                <img src="img/componentes/mosfet.jpg" alt="Venta de Componentes">
+            </div>
+        </div>
+        <div class="service flex" id="desarrollo">
+            <div class="image">
+                <img src="img/desarrollo.jpg" alt="Diseño y Desarrollo Electrónico">
+            </div>
+            <div class="text">
+                <h2>Diseño y Desarrollo Electrónico</h2>
+                <p>Soluciones innovadoras para proyectos electrónicos.</p>
+                <button class="button"><a href="#contacto" style="color:white;text-decoration:none;">Contacto</a></button>
+            </div>
+        </div>
+        <div class="service flex" id="impresion">
+            <div class="text">
+                <h2>Impresión 3D</h2>
+                <p>Prototipado rápido y fabricación de piezas personalizadas.</p>
+                <button class="button"><a href="#contacto" style="color:white;text-decoration:none;">Contacto</a></button>
+            </div>
+            <div class="image">
+                <img src="img/impresion.jpg" alt="Impresión 3D">
+            </div>
+        </div>
+        <div class="service flex" id="ensamble">
+            <div class="image">
+                <img src="img/ensamble.jpg" alt="Ensamble de PCBs">
+            </div>
+            <div class="text">
+                <h2>Ensamble de PCBs</h2>
+                <p>Montaje y soldadura de componentes en PCB con alta precisión.</p>
+                <button class="button"><a href="#contacto" style="color:white;text-decoration:none;">Contacto</a></button>
+            </div>
+        </div>
+        <div class="service" id="contacto">
+            <h2>Contacto</h2>
+            <img src="img/contacto.jpg" alt="Contacto">
+            <p>Ponte en contacto con nosotros para más información sobre nuestros servicios.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('#carousel img');
+        const totalImages = images.length;
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            const offset = -currentIndex * 100;
+            document.querySelector('#carousel').style.transform = `translateX(${offset}%)`;
+        }, 2000);  // Cambia la imagen cada 2 segundos
+    </script>
+</body>
+</html>
